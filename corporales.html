@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tratamientos Corporales</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e9d1baf3;
+    color:#444;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url("000.jpg");
+    background-size:cover;
+    background-position:center;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    color:rgb(223, 199, 157);
+    font-size:50px;
+}
+
+.intro{
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
+    text-align:center;
+}
+
+.intro h2{
+    color:#d5bd9b;
+    margin-bottom:15px;
+    font-size:35px;
+}
+
+.intro p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.grid{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto 70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgb(192, 165, 141);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#d3b284;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#d4b890c6;
+    color:white;
+    padding:14px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#bba78b;
+}
+
+footer{
+    background:#d9c4a6;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+
+.agendar{
+    text-align:center;
+    margin:20px 0 60px;
+}
+
+.btn-agendar{
+    display:inline-block;
+    padding:18px 55px;
+    background:linear-gradient(135deg,#cdb084,#b29165);
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:50px;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.btn-agendar:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+
+.volver{
+    padding:20px 30px 0;
+}
+
+.volver a{
+    display:inline-block;
+    text-decoration:none;
+    background:#c4a579;
+    color:white;
+    padding:12px 25px;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.volver a:hover{
+    background:#bea076;
+    transform:translateY(-3px);
+}
+
+/*================ CELULAR =================*/
+
+#menu{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+    color:#2c2c2c;
+}
+
+@media (max-width:768px){
+
+header{
+    padding:10px 5%;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.menu-icon{
+    display:block;
+    font-size:22px;
+}
+
+nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#d7b48b;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+nav ul{
+    flex-direction:column;
+    gap:0;
+}
+
+nav ul li{
+    border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+nav ul li a{
+    display:block;
+    padding:15px;
+    font-size:15px;
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    margin:12px auto;
+    padding:10px 22px;
+    font-size:14px;
+}
+
+#menu:checked ~ nav{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    height:75vh;
+    padding:20px;
+}
+
+.hero span{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin:10px 0;
+}
+
+.hero p{
+    font-size:16px;
+    line-height:26px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:12px;
+}
+
+/* SERVICIOS */
+
+.section-title h2{
+    font-size:32px;
+}
+
+.boton{
+    font-size:15px;
+    padding:10px 22px;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:35px 6% 15px;
+}
+
+.footer-container{
+    gap:25px;
+}
+
+.footer-box h3{
+    font-size:18px;
+}
+
+.footer-box p,
+.footer-box a{
+    font-size:14px;
+}
+
+.footer-bottom{
+    margin-top:20px;
+    padding-top:15px;
+    font-size:13px;
+}
+
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="volver">
+    <a href="index.html">← Volver al Inicio</a>
+</div>
+
+<section class="hero">
+<h1>Tratamientos Corporales</h1>
+</section>
+
+<section class="intro">
+<h2>Cuida y Moldea tu Cuerpo ✨</h2>
+
+<p>
+Nuestros tratamientos corporales están diseñados para ayudarte a mejorar tu figura, cuidar tu piel y sentirte mejor contigo mismo mediante técnicas profesionales y personalizadas.
+</p>
+
+</section>
+
+<section class="grid">
+
+<div class="card">
+<h3>Lipoláser</h3>
+<p>
+Tratamiento no invasivo que ayuda a reducir grasa localizada, moldear la figura y mejorar el contorno corporal sin cirugía.
+</p>
+
+
+</div>
+
+<div class="card">
+<h3> Maderoterapia</h3>
+<p>
+Técnica que utiliza instrumentos de madera para estimular la circulación, reducir la celulitis, moldear el cuerpo y favorecer el drenaje linfático.
+</p>
+
+
+</div>
+
+<div class="card">
+<h3> Radiofrecuencia</h3>
+<p>
+Ayuda a reafirmar la piel, estimular la producción de colágeno y mejorar la flacidez corporal para una apariencia más firme y tonificada.
+</p>
+
+
+</div>
+
+<div class="card">
+<h3> Depilación con Cera</h3>
+<p>
+Elimina el vello desde la raíz para una piel suave y libre de vello por más tiempo, con resultados duraderos.
+</p>
+
+
+</div>
+
+<div class="card">
+<h3> Masajes Reductores</h3>
+<p>
+Masajes especializados que ayudan a reducir medidas, mejorar la circulación, disminuir la retención de líquidos y moldear la figura.
+</p>
+
+
+</div>
+
+<div class="card">
+<h3> Blanqueamiento de Axilas, Entrepierna, Codos y Rodillas</h3>
+
+<p>
+Tratamiento estético diseñado para ayudar a aclarar zonas con hiperpigmentación, mejorando el tono de la piel de forma gradual. Deja la piel más uniforme, suave y con una apariencia saludable.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<section class="agendar">
+    <a class="btn-agendar" target="_blank"
+    href="https://wa.me/17204319348?text=Hola,%20me%20gustaría%20agendar%20una%20cita.">
+        Agendar Cita
+    </a>
+</section>
+
+
+</body>
+
+<footer>
+<h2> Siéntete bien, luce increíble ✨</h2>
+<p>Agenda tu cita y comienza tu proceso de bienestar con nosotros.</p>
+</footer>
+</html>

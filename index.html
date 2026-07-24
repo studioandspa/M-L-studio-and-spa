@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M & L Studio and Spa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#d1b29f;
+color:#0f0101;
+}
+
+/*================ NAVBAR ================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgb(211, 190, 164);
+backdrop-filter:blur(15px);
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+z-index:999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+
+}
+
+.logo h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:700;
+    color:#0c0000;
+}
+
+
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:35px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:#0e0e0e;
+font-size:17px;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#a45626;
+
+}
+
+.btn{
+
+padding:13px 28px;
+background:#d1b29f;
+color:rgb(23, 23, 23);
+text-decoration:none;
+border-radius:40px;
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#f0efef;
+transform:translateY(-3px);
+
+}
+
+/*================ HERO ================*/
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(250,248,244,.35),rgba(250,248,244,.45)),
+url("images/spa.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero-content span{
+
+letter-spacing:6px;
+color:#120000;
+font-size:18px;
+
+}
+
+.hero-content h1{
+
+font-family:'Cormorant Garamond',serif;
+font: size 200px;
+margin:20px;
+color:#050404;
+
+}
+
+.hero-content p{
+
+margin:20px 0;
+font-size:20px;
+line-height:35px;
+color:#555;
+
+}
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+
+}
+
+.btn2{
+
+padding:13px 30px;
+border:2px solid #d1b29f;
+border-radius:40px;
+text-decoration:none;
+color:#090909;
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:#d1b29f;
+color:rgb(252, 250, 247);
+
+}
+
+/*================ SOBRE ================*/
+
+.about{
+
+padding:120px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,.10);
+
+}
+
+.about h5{
+
+color:#d1b29f;
+font-size:18px;
+letter-spacing:3px;
+
+}
+
+.about h2{
+
+font-family:'Cormorant Garamond',serif;
+font-size:55px;
+margin:15px 0;
+color:#2C2C2C;
+
+}
+
+.about p{
+
+font-size:18px;
+line-height:35px;
+color:#666;
+
+}
+
+.info{
+
+display:flex;
+gap:25px;
+margin-top:40px;
+
+}
+
+.box{
+
+flex:1;
+background:rgb(248, 248, 248);
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+
+}
+
+.box h3{
+
+font-size:38px;
+color:#d1b29f;
+
+}
+
+.box p{
+
+margin-top:10px;
+font-size:15px;
+
+}
+
+.services{
+    padding:100px 8%;
+    background:#faf9f9;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#d1b29f;
+    font-weight:600;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:45px;
+    margin:15px 0;
+    color:#2C2C2C;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-header{
+    background:#B48C74;
+    color:rgb(255, 255, 255);
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.service-header h3{
+    font-size:18px;
+}
+
+.service-header span{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.service-info{
+    display:none;
+    padding:20px;
+    color:#555;
+    line-height:28px;
+}
+
+.hero{
+    height:100vh;
+    background:
+        url("ChatGPT Image 27 jun 2026, 14_09_11.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+
+.categoria{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.categoria{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.categoria img{
+    width: 100%;
+    display: block;
+    transition: .4s;
+}
+
+.categoria:hover img{
+    transform: scale(1.05);
+}
+
+.boton{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.95);
+    color:#d1b29f ;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.categoria:hover .boton{
+    background: #d1b29f;
+    color: white;
+}
+
+.footer{
+    background:#d1b29f;
+    color:white;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-box h3{
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.footer-box p{
+    margin:10px 0;
+    line-height:1.7;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#f7e3c5;
+    padding-left:6px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.3);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:15px;
+}
+
+#menu{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+    color:#2c2c2c;
+}
+
+/*==================== MENÚ CELULAR ====================*/
+
+#menu{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:22px;
+    color:#222;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+/* Header */
+
+header{
+    padding:10px 5%;
+    height:70px;
+}
+
+.logo{
+    gap:10px;
+}
+
+.logo img{
+    width:42px;
+    height:42px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.menu-icon{
+    display:block;
+}
+
+/* Menú */
+
+nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#d1b29f;
+    display:none;
+    border-radius:0 0 18px 18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+#menu:checked ~ nav{
+    display:block;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+    gap:0;
+}
+
+nav ul li{
+    border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+nav ul li:last-child{
+    border-bottom:none;
+}
+
+nav ul li a{
+    display:block;
+    width:100%;
+    padding:14px;
+    text-align:center;
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
+}
+
+nav ul li a:hover{
+    background:#bf9a7d;
+    color:#fff;
+}
+
+.btn{
+    display:inline-block;
+    margin:12px auto;
+    padding:10px 20px;
+    font-size:13px;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    padding:20px;
+}
+
+.hero-content span{
+    font-size:14px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin:10px 0;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:28px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Servicios */
+
+.services{
+    padding:70px 5%;
+}
+
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+.section-title h2{
+    font-size:32px;
+}
+
+.boton{
+    font-size:15px;
+    padding:10px 20px;
+}
+
+/* Footer */
+
+.footer{
+    padding:35px 5% 20px;
+}
+
+.footer-container{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.footer-box h3{
+    font-size:18px;
+}
+
+.footer-box p,
+.footer-box a{
+    font-size:14px;
+}
+
+.footer-bottom{
+    font-size:13px;
+}
+
+}
+
+
+/* PAQUETES */
+
+.paquetes{
+    padding:80px 8%;
+    background:#f8f3ef;
+    text-align:center;
+}
+
+
+.paquetes h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    margin-bottom:40px;
+    color:#4b2e2e;
+}
+
+
+.paquetes-container{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+
+}
+
+
+.paquete-card{
+
+    position:relative;
+    height:420px;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.paquete-card img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+
+
+.paquete-overlay{
+
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    padding-bottom:45px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.65)
+    );
+
+}
+
+
+
+.paquete-overlay h3{
+
+    color:white;
+    font-size:32px;
+    margin-bottom:20px;
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+
+
+.paquete-overlay a{
+
+    background:#d8a48f;
+    color:white;
+    text-decoration:none;
+
+    padding:12px 35px;
+    border-radius:30px;
+
+    font-size:16px;
+    transition:.3s;
+
+}
+
+
+
+.paquete-overlay a:hover{
+
+    background:#b97c62;
+    transform:scale(1.05);
+
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+    .paquetes-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .paquete-card{
+
+        height:350px;
+
+    }
+
+
+    .paquete-overlay h3{
+
+        font-size:26px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+<header>
+
+<div class="logo">
+    <img src="tt.jpeg">
+    <h2>M & L</h2>
+</div>
+
+<input type="checkbox" id="menu">
+
+<label for="menu" class="menu-icon">
+    <i class="fas fa-bars"></i>
+</label>
+
+<nav>
+
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="nosotros.html">Nosotros</a></li>
+
+<li><a href="#servicios">Servicios</a></li>
+
+<li>
+<a href="https://wa.me/17204319348?text=Hola,%20me%20gustaría%20obtener%20más%20información." target="_blank">
+Contacto
+</a>
+</li>
+
+<li>
+<a href="https://wa.me/17204319348?text=Hola,%20quiero%20agendar%20una%20cita." class="btn" target="_blank">
+Reservar
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+
+<div class="hero-content">
+
+<span>studio and spa</span>
+
+<h1>M & L </h1>
+
+<p>
+
+Mas que tratamientos, experiencias que transforman.
+</p>
+
+<div class="hero-buttons">
+
+
+
+<a href="https://wa.me/17204319348?text=Hola,%20quiero%20agendar%20una%20cita%20para%20Dermaplaning" class="btn">Agendar Cita</a>
+
+<a href="#servicios" class="btn2">Ver Servicios</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="services" id="servicios"> 
+
+    <div class="section-title">
+        <span>NUESTROS TRATAMIENTOS</span>
+        <h2>Explora nuestros servicios</h2>
+    </div>
+
+    <div class="services-grid">
+
+        <a href="faciales.html" class="categoria">
+            <img src="222.jpg" alt="Tratamientos Faciales">
+            <div class="boton">Ver Tratamientos Faciales</div>
+        </a>
+
+        <a href="corporales.html" class="categoria">
+            <img src="000.jpg" alt="Tratamientos Corporales">
+            <div class="boton">Ver Tratamientos Corporales</div>
+        </a>
+
+    </div>
+<!-- SECCIÓN PAQUETES -->
+<section class="paquetes" id="paquetes">
+
+    <h2>Paquetes</h2>
+
+    <div class="paquetes-container">
+
+        <!-- Masajes Reductores -->
+        <div class="paquete-card">
+
+            <img src="ññññ.jpg" alt="Masajes Reductores">
+
+            <div class="paquete-overlay">
+
+                <h3>Masajes Reductores</h3>
+
+                <a href="reductores.html">
+                    Ver Paquetes
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Drenaje Linfático -->
+        <div class="paquete-card">
+
+            <img src="+++.jpg" alt="Drenaje Linfático">
+
+            <div class="paquete-overlay">
+
+                <h3>Drenaje Linfático</h3>
+
+                <a href="drenaje.html">
+                    Ver Paquetes
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>M & L Studio & Spa</h3>
+            <p>Tu bienestar y belleza son nuestra prioridad.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contacto</h3>
+            <p>📞 +1 (720) 431-9348
+             <p>
+
+        </p>+1 (720) 486-3251
+     </p>   
+            
+            <p>📍 Denver, Colorado, Estados Unidos</p>
+
+            <p></p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Horario</h3>
+            <p>Lunes - Viernes</p>
+            <p>9:00 AM - 6:00 PM</p>
+            <p>Sábados</p>
+            <p>9:00 AM - 3:00 PM</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Menú</h3>
+
+     <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="9348?text=Hola,https://wa.me/1720431%20me%20gustaría%20obtener%20más%20información." target="_blank">Contacto
+
+    </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 M & L Studio & Spa | Todos los derechos reservados.
+    </div>
+
+</footer>
+<body>
+    <html>

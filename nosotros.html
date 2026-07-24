@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nosotros | M & L Studio and Spa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#f5f4f1;
+color:#040404;
+
+}
+
+
+/* MENU */
+
+header{
+
+padding:18px 8%;
+background:#d9c5b9;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+
+.logo img{
+
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+
+}
+
+
+.logo h2{
+
+font-family:'Cormorant Garamond',serif;
+font-size:35px;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+gap:30px;
+list-style:none;
+
+}
+
+
+nav a{
+
+text-decoration:none;
+color:#2C2C2C;
+
+}
+
+
+
+/* CONTENIDO */
+
+.nosotros{
+
+padding:80px 8%;
+
+background:#e5e1e1;
+
+}
+
+
+
+.contenedor{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+
+
+.contenedor img{
+
+width:100%;
+height:500px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+
+
+.texto{
+
+color:rgb(5, 5, 5);
+
+}
+
+
+.texto h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:65px;
+
+color:#d1b29f;
+
+margin-bottom:25px;
+
+}
+
+
+.texto p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:20px;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:14px 35px;
+
+background:#d1b29f;
+
+color:rgb(23, 21, 21);
+
+text-decoration:none;
+
+border-radius:40px;
+
+}
+
+
+
+.btn:hover{
+
+background:#2C2C2C;
+
+}
+
+
+
+/* CELULAR */
+
+
+@media(max-width:768px){
+
+
+.contenedor{
+
+grid-template-columns:1fr;
+
+}
+
+
+.texto{
+
+text-align:center;
+
+}
+
+
+.texto h1{
+
+font-size:45px;
+
+}
+
+
+nav ul{
+
+gap:10px;
+
+}
+
+
+
+}
+
+
+/*================ CELULAR =================*/
+
+#menu{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+    color:#2c2c2c;
+}
+
+@media (max-width:768px){
+
+header{
+    padding:10px 5%;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.menu-icon{
+    display:block;
+    font-size:22px;
+}
+
+nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#d7b48b;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+nav ul{
+    flex-direction:column;
+    gap:0;
+}
+
+nav ul li{
+    border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+nav ul li a{
+    display:block;
+    padding:15px;
+    font-size:15px;
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    margin:12px auto;
+    padding:10px 22px;
+    font-size:14px;
+}
+
+#menu:checked ~ nav{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    height:75vh;
+    padding:20px;
+}
+
+.hero span{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin:10px 0;
+}
+
+.hero p{
+    font-size:16px;
+    line-height:26px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:12px;
+}
+
+/* SERVICIOS */
+
+.section-title h2{
+    font-size:32px;
+}
+
+.boton{
+    font-size:15px;
+    padding:10px 22px;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:35px 6% 15px;
+}
+
+.footer-container{
+    gap:25px;
+}
+
+.footer-box h3{
+    font-size:18px;
+}
+
+.footer-box p,
+.footer-box a{
+    font-size:14px;
+}
+
+.footer-bottom{
+    margin-top:20px;
+    padding-top:15px;
+    font-size:13px;
+}
+
+}
+
+.volver-inicio{
+    position:fixed;
+    top:100px;
+    left:25px;
+    background:#d1b29f;
+    color:#1f1f1f;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+    z-index:999;
+}
+
+.volver-inicio:hover{
+    background:#b99581;
+    color:white;
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.volver-inicio{
+    top:80px;
+    left:15px;
+    padding:10px 18px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+<img src="tt.jpeg">
+
+<h2>M & L</h2>
+
+</div>
+
+
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="nosotros.html">Nosotros</a></li>
+
+<li><a href="faciales.html">Faciales</a></li>
+
+<li><a href="corporales.html">Corporales</a></li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="nosotros">
+
+
+<div class="contenedor">
+
+
+<img src="Facia.jpg" alt="M & L Studio and Spa">
+
+
+<div class="texto">
+
+
+<h1>Sobre Nosotros</h1>
+
+
+<p>
+En <b>M & L Studio and Spa</b> creemos que el cuidado personal
+es una experiencia que combina belleza, bienestar y relajación.
+</p>
+
+
+<p>
+Creamos un espacio diseñado para que cada cliente pueda desconectarse,
+disfrutar y recibir tratamientos personalizados según sus necesidades.
+</p>
+
+
+<p>
+Nuestro compromiso es brindar atención profesional, productos de calidad
+y una experiencia única que te haga sentir renovada.
+</p>
+
+
+<a href="index.html#servicios" class="btn">
+Conocer Servicios
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<a href="index.html" class="volver-inicio">
+    <i class="fas fa-arrow-left"></i> Volver al Inicio
+</a>
+</body>
+
+</html>
